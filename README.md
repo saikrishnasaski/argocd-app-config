@@ -1,6 +1,6 @@
 # Argo CD – Quick Setup Guide
 
-This repository contains Kubernetes resources for a service managed and continuously synchronized by an Argo CD agent running on a Kubernetes cluster.
+This repository contains Kubernetes manifests for a service managed and continuously synchronized by an Argo CD agent running on a Kubernetes cluster.
 
 Argo CD follows the **GitOps** model, where Git is the single source of truth for your cluster state.
 
