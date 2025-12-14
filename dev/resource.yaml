@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: user-service
-          image: docker.io/cskblackhawk/user-service:0.0.1-SNAPSHOT
+          image: docker.io/cskblackhawk/user-service:1.0.1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
