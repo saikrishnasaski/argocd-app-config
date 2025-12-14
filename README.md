@@ -6,7 +6,7 @@ Argo CD follows the **GitOps** model, where Git is the single source of truth fo
 
 ---
 
-## Screenshot / Demo
+## Git <-> Argo CD Agent <-> Kubernetes
 
 ![Argo CD Sync Flow](https://redhat-scholars.github.io/argocd-tutorial/argocd-tutorial/_images/argocd-sync-flow.png)
 
@@ -101,20 +101,22 @@ kubectl apply -f application.yaml
 
 ## Verify Application in Argo CD UI
 
+![Argo UI](argo-ui.png)
+
 After applying the application:
 
 Open Argo CD UI -> Navigate to Applications -> Select your application
 
 You should see:
-Sync status
-Health status
-Deployments
-Pods
-Services
+- Sync status
+- Health status
+- Deployments
+- Pods
+- Services
 
 ## GitOps Workflow
 
-Argo CD polls the configured Git repository every 3 minutes (default)
-Any change to Kubernetes manifests in Git triggers synchronization
-Cluster state is automatically reconciled to match Git
-Manual kubectl changes are reverted if selfHeal is enabled
+- Argo CD polls the configured Git repository every 3 minutes (default)
+- Any change to Kubernetes manifests in Git triggers synchronization
+- Cluster state is automatically reconciled to match Git
+- Manual kubectl changes are reverted if selfHeal is enabled
